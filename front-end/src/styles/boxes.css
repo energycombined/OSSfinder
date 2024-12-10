@@ -1,0 +1,125 @@
+/* Section styling */
+.boxes-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between boxes */
+    padding: 0; /* Remove extra padding */
+    background-color: #f4f4f9; /* Light gray background */
+    max-width: 1200px; /* Optional: Limit overall section width */
+    margin: 0 auto; /* Center section */
+    margin-top: -1px; /* Prevent small gaps caused by borders or rounding */
+    overflow: hidden; /* Prevent boxes from spilling out of the grey section */
+  }
+  
+  /* Box container */
+  .box {
+    perspective: 1000px;
+    width: calc(100% / 3 - 20px); /* Divide equally with gap */
+    max-width: 300px; /* Ensure consistent max size */
+    height: 240px; /* Standard size */
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    transition: transform 0.3s ease, height 0.3s ease; /* Smooth transitions */
+  }
+  
+  .box:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    height: 240px; /* Keep height consistent on hover */
+  }
+  
+  /* Inner container for hover effect */
+  .box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  
+  .box:hover .box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front and Back styles */
+  .box-front,
+  .box-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    padding: 15px; /* Ensure consistent padding */
+  }
+  
+  /* Front side */
+  .box-front {
+    background-color: #2a9d8f; /* Olive Green */
+    color: #ffffff; /* White text */
+  }
+  
+  .box-front h3 {
+    margin: 0;
+    font-size: 1.8rem; /* Slightly larger title */
+    font-weight: bold;
+  }
+  
+  /* Back side */
+  .box-back {
+    background-color: #ffffff; /* White for clarity */
+    color: #1d3557; /* Charcoal for readability */
+    transform: rotateY(180deg);
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 15px;
+    padding: 15px; /* Reduced padding */
+  }
+  
+  .box-back p {
+    margin: 0;
+    font-size: 1rem; /* Standard readable size */
+    line-height: 1.4;
+    color: #457b9d;
+  }
+  
+  /* Button on the back side */
+  .box-back button {
+    margin-top: 15px; /* Space between text and button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-color: #457b9d; /* Dark Green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box-back button:hover {
+    background-color: #2a9d8f; /* Olive Green */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .boxes-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .box {
+      width: 100%; /* Full width for small screens */
+      height: 220px; /* Adjust height for smaller screens */
+    }
+  }
+  
