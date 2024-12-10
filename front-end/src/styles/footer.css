@@ -1,0 +1,84 @@
+.footer {
+    background-color: #f0f4f1;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center; /* Center everything horizontally */
+    align-items: flex-start; /* Align items closer vertically */
+    flex-wrap: wrap;
+    gap: 30px; /* Slightly larger spacing between rows */
+    border-top: 2px solid #c3d9c4;
+  }
+  
+  .footer-logo {
+    flex: 0 1 auto; /* Adjust logo width dynamically without excess space */
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center;
+    margin-bottom: 10px; /* Add a small margin for additional spacing */
+  }
+  
+  .footer-logo-image {
+    height: 110px;
+  }
+  
+  .footer-links {
+    flex: 0 1 auto; /* Ensure columns don't stretch unevenly */
+    display: flex;
+    justify-content: space-around; /* Distribute columns evenly */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 50px; /* Increase space between columns */
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Slightly increase spacing between items in each column */
+    align-items: center; /* Center each column */
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: #2c662d;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #1a4b1e;
+  }
+  
+  .footer-connect {
+    font-weight: bold;
+    margin-bottom: 15px; /* Increase spacing above social icons */
+    color: #333;
+  }
+  
+  .footer-social-icons {
+    display: flex;
+    gap: 20px; /* Increase spacing between social icons */
+  }
+  
+  .social-icon {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #2c662d;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      align-items: center; /* Center links on smaller screens */
+      gap: 30px; /* Increase spacing for better clarity */
+    }
+  
+    .footer-column {
+      align-items: center; /* Center columns on smaller screens */
+      gap: 20px; /* Increase spacing between items */
+    }
+  }
+  

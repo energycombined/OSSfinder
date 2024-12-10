@@ -1,0 +1,21 @@
+button {
+    background-color: var(--secondary-green);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--dark-green);
+  }
+  
+  button:disabled {
+    background-color: var(--light-gray);
+    color: var(--charcoal);
+    cursor: not-allowed;
+  }
+  
