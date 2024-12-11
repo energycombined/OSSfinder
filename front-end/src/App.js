@@ -6,6 +6,7 @@ import SearchSolutions from './components/SearchSolutions';
 import LandscapeView from './components/LandscapeView';
 import SuccessStories from './components/SuccessStories';
 import SubmitSolution from './components/SubmitSolution';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import './styles/App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <LandscapeView />
         <SuccessStories />
         <SubmitSolution />
+        <ScrollToTopButton />
       </main>
       <Footer />
     </div>
