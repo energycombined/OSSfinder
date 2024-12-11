@@ -19,6 +19,7 @@ const SearchResults = () => {
               <th>Name of the Project</th>
               <th>Topics</th>
               <th>Activity</th>
+              <th>Most Recent Activity</th>
               <th>Use Cases</th>
             </tr>
           </thead>
