@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Boxes from './components/Boxes';
 import SearchSolutions from './components/SearchSolutions';
 import LandscapeView from './components/LandscapeView';
+import SuccessStories from './components/SuccessStories';
 import './styles/App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Boxes />
         <SearchSolutions />
         <LandscapeView />
+        <SuccessStories />
       </main>
       <Footer />
     </div>
