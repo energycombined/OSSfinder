@@ -5,6 +5,7 @@ import Boxes from './components/Boxes';
 import SearchSolutions from './components/SearchSolutions';
 import LandscapeView from './components/LandscapeView';
 import SuccessStories from './components/SuccessStories';
+import SubmitSolution from './components/SubmitSolution';
 import './styles/App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <SearchSolutions />
         <LandscapeView />
         <SuccessStories />
+        <SubmitSolution />
       </main>
       <Footer />
     </div>
