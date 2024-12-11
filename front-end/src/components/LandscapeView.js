@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../styles/LandscapeView.css';
 
 const LandscapeView = () => {
   const [solutions, setSolutions] = useState([]);
+  const navigate = useNavigate(); // Initialize navigate hook
 
   useEffect(() => {
     // Simulate fetching data from the PHP database with placeholders
@@ -21,6 +23,10 @@ const LandscapeView = () => {
     fetchSolutions();
   }, []);
 
+  const handleExploreClick = () => {
+    navigate('/browse-solutions'); // Navigate to Browse Solutions page
+  };
+
   return (
     <section className="landscape-section">
       <div className="landscape-header">
@@ -35,7 +41,9 @@ const LandscapeView = () => {
         ))}
       </div>
       <div className="landscape-footer">
-        <button className="explore-button">Explore All Solutions</button>
+        <button className="explore-button" onClick={handleExploreClick}>
+          Explore All Solutions
+        </button>
       </div>
     </section>
   );
