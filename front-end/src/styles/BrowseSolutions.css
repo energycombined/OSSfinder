@@ -1,0 +1,23 @@
+.browse-solutions {
+    padding: 40px 20px;
+    background-color: #f4f4f9; /* Light gray background */
+    max-width: 1200px; /* Align with other components */
+    margin: 20px auto; /* Center and add spacing */
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+  }
+  
+  .browse-solutions h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #1d3557; /* Charcoal */
+    margin-bottom: 20px;
+  }
+  
+  .browse-solutions p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #457b9d; /* Blue accent */
+    line-height: 1.6;
+  }
+  

@@ -1,0 +1,30 @@
+/* Button styling */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #457b9d; /* Dark Green */
+    color: #ffffff; /* White arrow */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #2a9d8f; /* Olive Green on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .scroll-to-top:active {
+    transform: scale(0.9); /* Slightly shrink on click */
+  }
+  
