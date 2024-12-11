@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Boxes from './components/Boxes';
 import SearchSolutions from './components/SearchSolutions';
+import LandscapeView from './components/LandscapeView';
 import './styles/App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         {/* Other components or page content */}
         <Boxes />
         <SearchSolutions />
+        <LandscapeView />
       </main>
       <Footer />
     </div>

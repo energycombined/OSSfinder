@@ -1,0 +1,74 @@
+/* Section styling */
+.landscape-section {
+    padding: 40px 20px;
+    background-color: #f4f4f9; /* Light gray background */
+    max-width: 1200px; /* Align with other components */
+    margin: 20px auto; /* Center and add white space */
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+  }
+  
+  /* Header styling */
+  .landscape-header {
+    margin-bottom: 30px;
+  }
+  
+  .landscape-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #1d3557; /* Charcoal */
+    margin: 0;
+  }
+  
+  .landscape-header p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #457b9d; /* Blue accent */
+    margin-top: 10px;
+  }
+  
+  /* Boxes container */
+  .landscape-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between boxes */
+  }
+  
+  /* Individual box */
+  .landscape-box {
+    width: calc(20% - 20px); /* 5 boxes per row with spacing */
+    height: 100px;
+    background-color: #ffffff; /* White background for boxes */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #2a9d8f; /* Olive Green */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Footer styling */
+  .landscape-footer {
+    margin-top: 30px;
+  }
+  
+  .explore-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #457b9d; /* Dark Green */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .explore-button:hover {
+    background-color: #2a9d8f; /* Olive Green */
+  }
+  
