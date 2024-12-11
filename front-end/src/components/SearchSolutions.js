@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import navigate hook
 import '../styles/SearchSolutions.css';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 
@@ -7,6 +8,33 @@ const SearchSolutions = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
   const [dropdownError, setDropdownError] = useState(false);
+
+  const navigate = useNavigate(); // Initialize navigate hook
+
+  // Mock data for testing the table
+  const mockResults = [
+    {
+      url: 'https://example.com/project1',
+      name: 'Project 1',
+      topics: 'Energy, Sustainability',
+      activity: 90,
+      useCases: 'Solar Panel Optimization',
+    },
+    {
+      url: 'https://example.com/project2',
+      name: 'Project 2',
+      topics: 'Water, Conservation',
+      activity: 85,
+      useCases: 'Water Resource Management',
+    },
+    {
+      url: 'https://example.com/project3',
+      name: 'Project 3',
+      topics: 'Agriculture, Food',
+      activity: 80,
+      useCases: 'Precision Farming',
+    },
+  ];
 
   const handleSearch = async () => {
     if (!selectedOption) {
@@ -22,27 +50,32 @@ const SearchSolutions = () => {
     setIsLoading(true);
 
     try {
-      // Replace with your actual backend endpoint
-      const response = await fetch('http://your-backend-url/search.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          query: searchQuery,
-          category: selectedOption,
-        }),
-      });
+      // Toggle between mock data and real endpoint
+      const useMock = true; // Change to false to use real backend
 
-      if (!response.ok) {
-        throw new Error('Error performing search');
+      if (useMock) {
+        // Simulate delay for mock data
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        navigate('/search-results', { state: { results: mockResults } });
+      } else {
+        const response = await fetch('http://your-backend-url/search.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: searchQuery,
+            category: selectedOption,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Error performing search');
+        }
+
+        const data = await response.json();
+        navigate('/search-results', { state: { results: data } });
       }
-
-      const data = await response.json();
-
-      // Process the response data as needed
-      console.log('Search results:', data);
-      alert('Search completed. Check console for results.');
     } catch (error) {
       console.error('Error:', error);
       alert('Failed to perform search. Please try again.');
@@ -73,7 +106,7 @@ const SearchSolutions = () => {
         <div className="search-bar-wrapper">
           <input
             type="text"
-            placeholder="Search for climate solutions..."
+            placeholder="Search for your use case"
             className="search-bar"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

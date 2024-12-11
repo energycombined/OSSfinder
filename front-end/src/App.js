@@ -12,6 +12,7 @@ import BrowseSolutions from './components/BrowseSolutions'; // New page
 import Community from './components/Community'; // New page
 import Resources from './components/Resources'; // New page
 import AboutUs from './components/AboutUs'; // New page
+import SearchResults from './components/SearchResults'; // New page
 import './styles/App.css';
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/about-us" element={<AboutUs />} />
+
+            <Route path="/" element={<SearchSolutions />} />
+            <Route path="/search-results" element={<SearchResults />} /> {/* New page */}
           </Routes>
         </main>
         <Footer />
