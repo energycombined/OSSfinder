@@ -11,29 +11,94 @@ const SearchSolutions = () => {
 
   const navigate = useNavigate(); // Initialize navigate hook
 
-  // Mock data for testing the table
-  const mockResults = [
-    {
-      url: 'https://example.com/project1',
-      name: 'Project 1',
-      topics: 'Energy, Sustainability',
-      activity: 90,
-      useCases: 'Solar Panel Optimization',
-    },
-    {
-      url: 'https://example.com/project2',
-      name: 'Project 2',
-      topics: 'Water, Conservation',
-      activity: 85,
-      useCases: 'Water Resource Management',
-    },
-    {
-      url: 'https://example.com/project3',
-      name: 'Project 3',
-      topics: 'Agriculture, Food',
-      activity: 80,
-      useCases: 'Precision Farming',
-    },
+  // Full list of dropdown options
+  const dropdownOptions = [
+    "University",
+    "Research Institute",
+    "Research Institution",
+    "Government",
+    "Non-Profit",
+    "Software Development Company",
+    "Energy Company",
+    "Environmental Organizations",
+    "Tech Startups",
+    "Forestry Companies",
+    "Research Institutions",
+    "Environmental NGOs",
+    "Universities",
+    "Open source",
+    "Deltares",
+    "Power Market Participants",
+    "Energy Companies",
+    "Public Sector",
+    "Open Data Platform",
+    "Renewable Energy Companies",
+    "Consulting",
+    "Energy",
+    "Research",
+    "Environmental Technology",
+    "Software development",
+    "Sustainability solutions",
+    "Education",
+    "Supply Chain Companies",
+    "Energy Consulting",
+    "Software Development",
+    "Unknown",
+    "Data Science Consulting",
+    "Non-Profit Organization",
+    "Open Source",
+    "Data Analysis",
+    "Water Treatment",
+    "Environmental",
+    "Open-source",
+    "Software Company",
+    "Government Agency",
+    "Biotechnology",
+    "Ecological Research",
+    "Institutions",
+    "Environmental organizations",
+    "Academic Institutions",
+    "Research Organizations",
+    "Politecnico di Torino",
+    "University Research",
+    "Individual Developers",
+    "Small Startups",
+    "Agriculture Industry",
+    "unknown",
+    "Research and Development",
+    "Open Source Project",
+    "Community Driven",
+    "Local Authority",
+    "Academic",
+    "Energy Solutions",
+    "Non-Profit Organizations",
+    "Government Agencies",
+    "Commercial",
+    "Aerospace Companies",
+    "Engineering Consulting",
+    "Wind Energy Industry",
+    "University Research Institute",
+    "Data Science",
+    "Not specified",
+    "不特定",
+    "ACCESS-NRI",
+    "Consulting Firms",
+    "Research Organization",
+    "Technology Companies",
+    "Start-up",
+    "Academic Institution",
+    "Architecture Firms",
+    "Real Estate Companies",
+    "Private",
+    "Research & Academic",
+    "Consultancy",
+    "Environmental Research and Data Analysis",
+    "Sinergise",
+    "Conservation Organizations",
+    "Research Institutes",
+    "Agricultural Company",
+    "Environmental Monitoring Agency",
+    "Space Agency",
   ];
 
   const handleSearch = async () => {
@@ -55,6 +120,22 @@ const SearchSolutions = () => {
 
       if (useMock) {
         // Simulate delay for mock data
+        const mockResults = [
+          {
+            url: 'https://example.com/project1',
+            name: 'Project 1',
+            topics: 'Energy, Sustainability',
+            activity: 90,
+            useCases: 'Solar Panel Optimization',
+          },
+          {
+            url: 'https://example.com/project2',
+            name: 'Project 2',
+            topics: 'Water, Conservation',
+            activity: 85,
+            useCases: 'Water Resource Management',
+          },
+        ];
         await new Promise((resolve) => setTimeout(resolve, 1000));
         navigate('/search-results', { state: { results: mockResults } });
       } else {
@@ -137,9 +218,9 @@ const SearchSolutions = () => {
           <option value="" disabled>
             Select type of company (required)
           </option>
-          {Array.from({ length: 15 }).map((_, index) => (
-            <option key={index} value={`placeholder-${index + 1}`}>
-              Placeholder {index + 1}
+          {dropdownOptions.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
             </option>
           ))}
         </select>
