@@ -34,6 +34,7 @@ const SearchResults = () => {
                 <td>{result.name}</td>
                 <td>{result.topics}</td>
                 <td>{result.activity}</td>
+                <td>{result.mostRecentActivity}</td>
                 <td>{result.useCases}</td>
               </tr>
             ))}

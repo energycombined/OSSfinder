@@ -126,6 +126,7 @@ const SearchSolutions = () => {
             name: 'Project 1',
             topics: 'Energy, Sustainability',
             activity: 90,
+            mostRecentActivity:'Solar Panel Optimization',
             useCases: 'Solar Panel Optimization',
           },
           {
@@ -133,6 +134,7 @@ const SearchSolutions = () => {
             name: 'Project 2',
             topics: 'Water, Conservation',
             activity: 85,
+            mostRecentActivity: 'Water Resource Management',
             useCases: 'Water Resource Management',
           },
         ];
