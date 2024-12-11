@@ -4,12 +4,12 @@
     justify-content: center;
     align-items: center;
     gap: 20px; /* Space between boxes */
-    padding: 0; /* Remove extra padding */
+    padding: 40px 20px; /* Add consistent padding for white space */
     background-color: #f4f4f9; /* Light gray background */
-    max-width: 1200px; /* Optional: Limit overall section width */
-    margin: 0 auto; /* Center section */
-    margin-top: -1px; /* Prevent small gaps caused by borders or rounding */
-    overflow: hidden; /* Prevent boxes from spilling out of the grey section */
+    max-width: 1200px; /* Align with search-section width */
+    margin: 20px auto; /* Add white space and center section */
+    border-radius: 10px; /* Optional: Add rounded corners for a modern look */
+    overflow: hidden; /* Prevent overflow */
   }
   
   /* Box container */

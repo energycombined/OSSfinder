@@ -1,0 +1,147 @@
+/* Section styling for alignment */
+.search-section {
+    padding: 40px 20px; /* Consistent padding */
+    background-color: #f4f4f9; /* Light gray background */
+    max-width: 1200px; /* Align with the boxes-section width */
+    margin: 20px auto; /* Add white space between components and center */
+    text-align: center;
+    border-radius: 10px; /* Optional: Add rounded corners for a modern look */
+  }
+  
+  /* Explanatory text styling */
+  .search-text {
+    max-width: 600px; /* Limit the width of the text for better centering */
+    margin: 0 auto 20px; /* Center text horizontally and add spacing below */
+  }
+  
+  .search-text p {
+    font-family: 'Poppins', sans-serif; /* Primary font */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1d3557; /* Charcoal for readability */
+  }
+  
+  /* Search bar and button container */
+  .search-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between search bar and dropdown */
+  }
+  
+  .search-bar-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Match the alignment with boxes */
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    width: calc(100% - 50px); /* Subtract the button width */
+    height: 50px; /* Slightly taller search bar */
+    padding: 10px 15px; /* Add standard padding */
+    font-size: 1.2rem; /* Larger font size for readability */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px 0 0 5px; /* Round only the left side */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    outline: none;
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+  }
+  
+  .search-bar:focus {
+    border-color: #2a9d8f; /* Olive Green for focus */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search button styling */
+  .search-button {
+    position: absolute;
+    top: 0;
+    right: 0; /* Flush with the edge of the search bar */
+    height: 100%; /* Match the height of the search bar */
+    width: 50px; /* Fixed width for the button */
+    background-color: #457b9d; /* Dark Green */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Round only the right side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:disabled {
+    background-color: #a8dadc; /* Light Green for disabled state */
+    cursor: not-allowed;
+  }
+  
+  .search-button:hover:not(:disabled) {
+    background-color: #2a9d8f; /* Olive Green on hover */
+  }
+  
+  /* Delete button styling */
+  .delete-button {
+    position: absolute;
+    top: 50%;
+    right: 55px; /* Positioned left of the arrow button */
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #457b9d; /* Dark Green */
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    color: #2a9d8f; /* Olive Green on hover */
+  }
+  
+/* Dropdown styling */
+.dropdown {
+    width: 70%;
+    max-width: 500px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    outline: none;
+  }
+  
+  .dropdown:focus {
+    border-color: #2a9d8f; /* Olive Green for focus */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Error state for dropdown */
+  .dropdown-error {
+    border-color: #ff4d4f; /* Red for error */
+    box-shadow: 0px 4px 6px rgba(255, 77, 79, 0.5); /* Subtle red shadow */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #ff4d4f; /* Red for error text */
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .search-bar-wrapper {
+      max-width: 100%;
+    }
+  
+    .dropdown {
+      width: 90%; /* Full width on smaller screens */
+    }
+  
+    .search-text {
+      max-width: 100%; /* Allow text to expand fully on smaller screens */
+    }
+  }
+  
