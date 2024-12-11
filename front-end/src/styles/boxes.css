@@ -91,24 +91,27 @@
     color: #457b9d;
   }
   
-  /* Button on the back side */
-  .box-back button {
+/* Button styling for the back side */
+.box-back .box-button {
+    display: inline-block; /* Ensures consistent size */
     margin-top: 15px; /* Space between text and button */
     padding: 10px 20px;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    background-color: #457b9d; /* Dark Green */
-    border: none;
-    border-radius: 5px;
+    color: #ffffff; /* White text */
+    background-color: #457b9d; /* Dark Green background */
+    text-decoration: none; /* Remove underline for links */
+    text-align: center;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .box-back button:hover {
-    background-color: #2a9d8f; /* Olive Green */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
+  .box-back .box-button:hover {
+    background-color: #2a9d8f; /* Olive Green on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }  
   
   /* Responsive adjustments */
   @media (max-width: 768px) {

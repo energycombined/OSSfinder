@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/header.css'; 
+import { NavLink } from 'react-router-dom';
+import '../styles/header.css';
 import logo from '../assets/energy-combined-logo.png';
 
 const Header = () => {
@@ -11,11 +12,46 @@ const Header = () => {
       </div>
       <nav className="navbar">
         <ul className="nav-links">
-          <li className="nav-item active">Home</li>
-          <li className="nav-item">Browse Solutions</li>
-          <li className="nav-item">Community</li>
-          <li className="nav-item">Resources</li>
-          <li className="nav-item">About Us</li>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/browse-solutions"
+              className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
+            >
+              Browse Solutions
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/community"
+              className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
+            >
+              Community
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/resources"
+              className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
+            >
+              Resources
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
+            >
+              About Us
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </div>

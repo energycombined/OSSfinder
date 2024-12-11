@@ -61,7 +61,7 @@ const SearchSolutions = () => {
   };
 
   return (
-    <section className="search-section">
+    <section id="search-section" className="search-section">
       <div className="search-text">
         <p>
           Searches over <strong>4,400 climate solutions</strong> and lets you explore all the potential use cases (e.g.,
